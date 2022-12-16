@@ -9,10 +9,18 @@ contenant des produits et appartenant à un client.
 
 ### Les dépendences de Spring Boot utilisées pour les micro-services :
 
-Lombok, pour créer une application web spring MVC: Spring Web et Rest Repositories, pour le SQL : Spring Data JPA et H2 DATABASE, 
-Pour faire le monitoring des micro-services: Spring Boot Actuator,
-Pour Spring Cloud Discovery: Eureka Discovery Client
-Pour faire communiquer les micro-services : OpenFeign,
+Pour le getters et le setters: Lombok.
+
+Pour créer une application web spring MVC: Spring Web et Rest Repositories.
+
+Pour le SQL : Spring Data JPA et H2 DATABASE. 
+
+Pour faire le monitoring des micro-services: Spring Boot Actuator.
+
+Pour Spring Cloud Discovery: Eureka Discovery Client.
+
+Pour faire communiquer les micro-services : OpenFeign.
+
 et aussi la Spring HATEOAS.
 
 
@@ -28,6 +36,7 @@ Spring Boot Actuator et Eureka Discovery Client
 ###### Création de 2 packages :
 
 -> Package entities qui contient la classe  Customer et l'interface  CustomerProjection
+
 -> Package repository qui contient l'interface CustomerProjection
 
 ###### Présentation de la base de données customers-db (h2-console) : 
@@ -43,6 +52,7 @@ Spring Boot Actuator et Eureka Discovery Client
 ###### Création de 2 packages :
 
 -> Package entities qui contient la classe Product
+
 -> Package repository qui contient l'interface ProductRepository
 
 ###### Présentation de la base de données customers-db (h2-console) : 
@@ -57,6 +67,7 @@ Spring Boot Actuator et Eureka Discovery Client
 
 Pour faire la configuration des propriétés de la Gateway,
 on crée un fichier yml dans le package resources , on l'a appelé "application .yml"
+
 Et pour les routes ,on les ajoute dans application .yml ou bien dans le fichier  GatewayApplication.java en créant l'objet routes de RouteLocator.
 
  ##### Le résultat sous forme de fchier JSON de la Gateway  avec une configuration statique :
@@ -72,6 +83,7 @@ Et pour les routes ,on les ajoute dans application .yml ou bien dans le fichier 
 ### 4. La création de l'annuaire Eureka Discovery Service:
 
 On ajoute l'annotation @EnableEurekaServer qui permet d'activer le service discovery.
+
 Et si on écrit dans le navigateur :
 ###### http://localhost:8761 
 
@@ -97,9 +109,13 @@ Ce micro service est réservé à la facturation , et il relie les micro-service
 ###### Création de 5 packages:
 
 -> entities : pour les 2 classes(Bill et ProductItem) et l'interface BillProjection pour le frontend.
--> model : pour les 2 classes Customer et Product
--> repository : pour BillRepository et ProductItemRepository
+
+-> model : pour les 2 classes Customer et Product.
+
+-> repository : pour BillRepository et ProductItemRepository.
+
 -> service : CustomerRestClient et ProductRestClient pour la communication avec les micro-services.
+
 -> web : BillRestController qui fait la création d'un web service de type REST avec un restController (@RestController)
 
 ###### Présentation de la base de données bill-db (h2-console) :
