@@ -11,7 +11,7 @@ contenant des produits et appartenant à un client.
 
 ### Les dépendences de Spring Boot utilisées pour les micro-services :
 
-Pour les getters et le setters: Lombok.
+Pour les getters et les setters: Lombok.
 
 Pour créer une application web spring MVC: Spring Web et Rest Repositories.
 
