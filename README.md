@@ -43,7 +43,7 @@ Spring Boot Actuator et Eureka Discovery Client
 
 <img width="274" alt="h211" src="https://user-images.githubusercontent.com/82985419/208118971-c1e925e8-5c16-4901-8a55-fa1a39c55df4.png">
  
- ###### Le résultat sous forme de fchier JSON de micro-service CUSTOMER-SERVICE : 
+ ###### Le résultat sous forme de fichier JSON de micro-service CUSTOMER-SERVICE : 
 
 <img width="514" alt="customer-service" src="https://user-images.githubusercontent.com/82985419/208116502-4f11d913-fd8c-48da-afd0-4f84ec0f5101.png">
 
@@ -59,7 +59,7 @@ Spring Boot Actuator et Eureka Discovery Client
 
 <img width="298" alt="h233" src="https://user-images.githubusercontent.com/82985419/208122936-4244cce8-e858-4808-bc46-f4ff6ed77379.png">
 
- ###### Le résultat sous forme de fchier JSON de micro-service CUSTOMER-SERVICE :
+ ###### Le résultat sous forme de fichier JSON de micro-service CUSTOMER-SERVICE :
  
  <img width="572" alt="inventory-service" src="https://user-images.githubusercontent.com/82985419/208123123-d18dad1b-1133-47de-b887-46e9e2094762.png">
 
@@ -129,7 +129,7 @@ Ce micro service est réservé à la facturation , et il relie les micro-service
 <img width="377" alt="16 12 2022_21 07 03_REC" src="https://user-images.githubusercontent.com/82985419/208180513-3b11a4fc-8e88-4f0d-bda6-c7ad6a3068d8.png">
 
 
- ##### Le résultat sous forme de fchier JSON :
+ ##### Le résultat sous forme de fichier JSON :
  
  En utilisant le RestController , on a pu créer un web service qui relie tous les micro-services ,et il fait une facture complète qui contient le id client et une liste de produits (Bill+Customer+ProductItemProduct).
  
