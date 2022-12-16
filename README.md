@@ -57,11 +57,11 @@ Spring Boot Actuator et Eureka Discovery Client
 
 -> Package repository qui contient l'interface ProductRepository
 
-###### Présentation de la base de données customers-db (h2-console) : 
+###### Présentation de la base de données products-db (h2-console) : 
 
 <img width="298" alt="h233" src="https://user-images.githubusercontent.com/82985419/208122936-4244cce8-e858-4808-bc46-f4ff6ed77379.png">
 
- ###### Le résultat sous forme de fichier JSON de micro-service CUSTOMER-SERVICE :
+ ###### Le résultat sous forme de fichier JSON de micro-service INVENTORY-SERVICE :
  
  <img width="572" alt="inventory-service" src="https://user-images.githubusercontent.com/82985419/208123123-d18dad1b-1133-47de-b887-46e9e2094762.png">
 
@@ -74,15 +74,15 @@ Et pour les routes ,on les ajoute dans application .yml ou bien dans le fichier 
 
  ##### Le résultat sous forme de fchier JSON de la Gateway  avec une configuration statique :
  
-  ###### -> Pour le micro-service CUSTOMER-SERVICE:
+  ###### -> Pour le micro-service CUSTOMER-SERVICE :
 
 <img width="519" alt="gateway-statique1" src="https://user-images.githubusercontent.com/82985419/208125559-012dd818-485a-42ab-a4c2-bbabf99c9b35.png">
 
-###### -> Pour le micro-service INVENTORY-SERVICE:
+###### -> Pour le micro-service INVENTORY-SERVICE :
 
 <img width="506" alt="gateway-statique2" src="https://user-images.githubusercontent.com/82985419/208125796-070cffad-e550-402c-872a-cda19983e18e.png">
 
-### 4. La création de l'annuaire Eureka Discovery Service:
+### 4. La création de l'annuaire Eureka Discovery Service :
 
 On ajoute l'annotation @EnableEurekaServer qui permet d'activer le service discovery.
 
@@ -93,15 +93,15 @@ On obtient le résultat suivant :
 
 <img width="899" alt="discovery-service" src="https://user-images.githubusercontent.com/82985419/208130063-f1b5579a-e97b-4b3a-9569-d3e7e700078c.png">
 
-### 5. La configuration dynamique des routes de la gateway:
+### 5. La configuration dynamique des routes de la gateway :
 
 En utilisant le service Discovery , on crée l'objet dynamicRoutes de la classe DiscoveryClientRouteDefinitionLocator. Donc on peut communiquer avec les micro-services seulement avec leurs noms .
 
-###### Par exemple:
+###### Par exemple :
  
 <img width="539" alt="gateway-dynamique" src="https://user-images.githubusercontent.com/82985419/208133028-5d88e24c-4a98-4814-80a9-6de52c512842.png">
 
-### 6. La création du service de facturation Billing-Service en utilisant Open Feign:
+### 6. La création du service de facturation Billing-Service en utilisant Open Feign :
 
 Ce micro service est réservé à la facturation , et il relie entre les micro-services CUSTOMER-SERVICE et INVENTORY-SERVICE.
 
@@ -138,12 +138,12 @@ Ce micro service est réservé à la facturation , et il relie entre les micro-s
  <img width="561" alt="billing-service" src="https://user-images.githubusercontent.com/82985419/208182492-ba8b6ae7-4a98-49d7-91fe-c321b3a1d581.png">
 
  
-##### Après l'ajout du micro-service BILLING-SERVICE ,Spring Eureka devient comme ça:
+##### Après l'ajout du micro-service BILLING-SERVICE ,Spring Eureka devient comme ça :
 
 <img width="760" alt="discovery2" src="https://user-images.githubusercontent.com/82985419/208179444-be8c131d-666b-48e4-a847-080493e65a9d.png">
 
 
-## Partie Frontend (Le nom de dossier: ecom-web-app):
+## Partie Frontend (Le nom de dossier: ecom-web-app) :
 
 ### 7. La création d'un client Web Angular:
 
@@ -156,7 +156,7 @@ On a utilisé le framework de Javascript Angular et le framework de CSS Bootstra
  <img width="374" alt="16 12 2022_21 53 56_REC" src="https://user-images.githubusercontent.com/82985419/208187220-7343b9ad-2a79-4469-8621-ee1aead78e9d.png">
 
 
-##### CustomersComponent :
+##### CustomersComponent (http://localhost:4200/customers) :
 
 <img width="405" alt="16 12 2022_21 56 04_REC" src="https://user-images.githubusercontent.com/82985419/208187507-6a925c0f-3758-4ab0-a83b-56f475ee0161.png">
 
