@@ -101,7 +101,7 @@ En utilisant le service Discovery , on crée l'objet dynamicRoutes de la classe 
 
 ### 6. La création du service de facturation Billing-Service en utilisant Open Feign:
 
-Ce micro service est réservé à la facturation , et il relie les micro-services CUSTOMER-SERVICE et INVENTORY-SERVICE avec la relation ### ManyToMany .
+Ce micro service est réservé à la facturation , et il relie entre les micro-services CUSTOMER-SERVICE et INVENTORY-SERVICE.
 
 <img width="513" alt="classes" src="https://user-images.githubusercontent.com/82985419/208178960-bf7c7656-4561-47b0-ab3a-6d83b9e11ebb.png">
 
@@ -129,9 +129,9 @@ Ce micro service est réservé à la facturation , et il relie les micro-service
 <img width="377" alt="16 12 2022_21 07 03_REC" src="https://user-images.githubusercontent.com/82985419/208180513-3b11a4fc-8e88-4f0d-bda6-c7ad6a3068d8.png">
 
 
- ##### Le résultat sous forme de fichier JSON :
+ #### Le résultat sous forme de fichier JSON :
  
- En utilisant le RestController , on a pu créer un web service qui relie tous les micro-services ,et il fait une facture complète qui contient le id client et une liste de produits (Bill+Customer+ProductItemProduct).
+ En utilisant le RestController , on a pu créer un web service qui relie tous les micro-services ,et il fait une facture complète qui contient customerId et une liste des  productsItems avec chaque productItem est pour un seul produit (Bill+Customer+ProductItemProduct).
  
  <img width="561" alt="billing-service" src="https://user-images.githubusercontent.com/82985419/208182492-ba8b6ae7-4a98-49d7-91fe-c321b3a1d581.png">
 
@@ -139,6 +139,38 @@ Ce micro service est réservé à la facturation , et il relie les micro-service
 ##### Après l'ajout du micro-service BILLING-SERVICE ,Spring Eureka devient comme ça:
 
 <img width="760" alt="discovery2" src="https://user-images.githubusercontent.com/82985419/208179444-be8c131d-666b-48e4-a847-080493e65a9d.png">
+
+
+## Partie Frontend (Le nom de dossier: ecom-web-app):
+
+### 7. La création d'un client Web Angular:
+
+On a utilisé le framework de Javascript Angular et le framework de CSS Bootstrap pour créer un client Web Angular.
+
+ ##### app.component.html:
+ 
+ Création du navbar
+ 
+ <img width="374" alt="16 12 2022_21 53 56_REC" src="https://user-images.githubusercontent.com/82985419/208187220-7343b9ad-2a79-4469-8621-ee1aead78e9d.png">
+
+
+##### CustomersComponent :
+
+<img width="405" alt="16 12 2022_21 56 04_REC" src="https://user-images.githubusercontent.com/82985419/208187507-6a925c0f-3758-4ab0-a83b-56f475ee0161.png">
+
+Mais pour traiter les factures des clients on a ajouter un bouton pour chaque client pour gérer ces commandes.
+
+<img width="431" alt="16 12 2022_21 58 02_REC" src="https://user-images.githubusercontent.com/82985419/208187996-4e3e4d93-c631-44b2-b569-4fd07f1b0c34.png">
+
+
+##### ProductsComponent (http://localhost:4200/products) :
+
+<img width="459" alt="16 12 2022_21 50 40_REC" src="https://user-images.githubusercontent.com/82985419/208186954-93020ab0-1bc3-4083-8c92-08bc443c8d3a.png">
+
+
+
+
+
 
 
 
