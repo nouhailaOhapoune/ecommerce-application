@@ -1,5 +1,7 @@
 # Ecommerce application avec Java JEE
+
 ### Objectif :  
+
 Créer une application basée sur une architecture micro-service qui permet de gérer les factures 
 contenant des produits et appartenant à un client.
 
@@ -9,7 +11,7 @@ contenant des produits et appartenant à un client.
 
 ### Les dépendences de Spring Boot utilisées pour les micro-services :
 
-Pour le getters et le setters: Lombok.
+Pour les getters et le setters: Lombok.
 
 Pour créer une application web spring MVC: Spring Web et Rest Repositories.
 
